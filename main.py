@@ -2,7 +2,6 @@ import copy
 import random
 
 class Hat:
-  # We will get a dictionary with all the k,v pairs passed as arguments
   def __init__(self, **kwargs ):
     self.contents = list()
     for k,v in kwargs.items() :
@@ -30,7 +29,6 @@ def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
   M = 0
   # For loop for each experiment
   for exp in range(num_experiments):
-    # We need to create a copy of hat, otherwise, after each experiment the original hat will be modified
     new_hat = copy.deepcopy(hat)
     # Same as before for expected_ball
     new_expected_balls = copy.deepcopy(expected_balls)
